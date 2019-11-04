@@ -1,0 +1,14 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  multi-out-faas:
+    lang: go
+    handler: ./multi-out-faas
+    image: grycap/multi-out-faas
+    secrets:
+    - multi-out-faas-config
+    environment:
+      CONFIG_FILE: multi-out-faas-config
+
