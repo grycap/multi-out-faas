@@ -5,7 +5,7 @@ provider:
 functions:
   multi-out-faas:
     lang: go
-    handler: ./multi-out-faas
+    handler: .
     image: grycap/multi-out-faas
     secrets:
     - multi-out-faas-config
