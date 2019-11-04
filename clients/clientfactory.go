@@ -23,7 +23,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/grycap/multi-out-faas/config"
+	//"github.com/grycap/multi-out-faas/config"
+	"handler/function/config"
 )
 
 var errInvalidProvider = errors.New("Invalid provider")

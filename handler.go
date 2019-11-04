@@ -26,9 +26,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/grycap/multi-out-faas/clients"
-	"github.com/grycap/multi-out-faas/config"
-	"github.com/grycap/multi-out-faas/events"
+	//"github.com/grycap/multi-out-faas/clients"
+	//"github.com/grycap/multi-out-faas/config"
+	//"github.com/grycap/multi-out-faas/events"
+	"handler/function/clients"
+	"handler/function/config"
+	"handler/function/events"
 )
 
 // Handle a serverless request
