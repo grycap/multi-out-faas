@@ -22,6 +22,7 @@ package events
 import (
 	"encoding/json"
 	"errors"
+	"net/url"
 )
 
 // Event struct used to load events
@@ -77,6 +78,11 @@ func ReadEvent(rawEvent string) (*Event, error) {
 
 	key, ok := record0["s3"].(map[string]interface{})["object"].(map[string]interface{})["key"].(string)
 	if !ok {
+		return nil, errInvalidEvent
+	}
+	// Decode url encoded key
+	key, err = url.QueryUnescape(key)
+	if err != nil {
 		return nil, errInvalidEvent
 	}
 

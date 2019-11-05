@@ -121,7 +121,7 @@ func Handle(req []byte) string {
 			providerClients[name] = clients.GetClient(&provider)
 			fileName, err = providerClients[name].Download(dir, event.Path)
 			if err != nil {
-				log.Println("Error downloading file: " + err.Error())
+				log.Println(err.Error())
 				continue
 			}
 			log.Println("File '" + event.ObjectKey + "' successfully downloaded from storage provider " + provider.Name)
