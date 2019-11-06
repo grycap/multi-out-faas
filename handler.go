@@ -124,7 +124,7 @@ func Handle(req []byte) string {
 				log.Println(err.Error())
 				continue
 			}
-			log.Println("File '" + event.ObjectKey + "' successfully downloaded from storage provider " + provider.Name)
+			log.Println("File '" + event.ObjectKey + "' successfully downloaded from storage provider '" + provider.Name + "'")
 			break
 		}
 	}
